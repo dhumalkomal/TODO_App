@@ -1,0 +1,197 @@
+/* body style */
+body{
+    margin: 10px;
+    margin-top: 0%;
+    /* background-color: rgb(138, 210, 234); */
+}
+
+/* container style */
+#container{
+    height: auto;
+    width: 70%;
+    margin: auto;
+    position: relative;
+    padding: 10px;
+    /* background-color: rgb(173, 216, 230); */
+    background-color: lightcyan;
+    box-shadow: 1px 1px 8px 2px rgb(145, 144, 144);
+    /* opacity: 0.8; */
+    text-align: center;   
+}
+
+/* form style */
+
+/* container of form style */
+#category_Form div{
+    width: 100%;
+    display: inline-flex;
+}
+
+/* description style */
+#description{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    border-top: 1px solid grey;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* category input style */
+#category{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border:  1px solid grey;
+    padding: 10px;
+    margin: 10px;
+    /* margin: 0; */
+    border-left: none;
+    box-sizing: border-box;   
+}
+
+/*due date input style  */
+#dueDate{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid grey;
+    padding: 10px;
+    border-left: none;
+    border-right: none ;
+    margin: 0px;
+    box-sizing: border-box;
+    border: none;
+}
+
+/* all input style  */
+input{
+    border: none;
+    width: 90%;
+    height: 50px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 200;
+    transition: all 1s ease-out;
+}
+
+/* all input active state style */
+input:active {
+    background-color: grey;
+    border: none;
+}
+
+/* category selection style */
+#catgy{
+    border: none;
+    margin: 5px;
+    width: 90%;
+    height: 100%;
+    background-color: transparent;
+}
+
+/* category option style */
+#catgy option{
+    background-color: inherit;
+}
+
+/* button container style */
+#buttons{
+    position: relative;
+    left: 10%;
+    margin: 4% 0;
+}
+
+/* button style */
+button{
+    border: none;
+    background-color: transparent;
+    height: 2.5rem;
+    box-shadow: 0px 0px 4px 1px lightgray;
+    cursor: pointer;
+    position: relative;
+    top: 7px;
+}
+
+/* hover effect on add button and delete button */
+#addTask:hover, #deleteTask:hover {
+    box-shadow: 1px 1px 8px 2px lightblue;
+
+}
+
+/* styling for add button */
+#addTask{
+    width: 50%;
+    font-size: 1.1rem;
+    color: white;
+    padding: 4px;
+    border: none;
+    background:  lightblue;
+}
+
+/* styling for delete button */
+#deleteTask{
+    width: 50%;
+    font-size: 1.1rem;
+    color: white;
+    padding: 5px;
+    border: none;
+    background:  lightblue;
+}
+
+/* display tasks list style  */
+
+/* tasks view container styles */
+#task-container {
+    padding: 3%;
+}
+
+/* list item style */
+ul li {
+    list-style: none;
+    width: 95%;
+    box-shadow: 2px 3px 7px 0px lightblue;
+    border: 2px solid lightblue;
+    margin: 5px;
+}
+
+/*  */
+#task-list{
+    display: flex;
+}
+
+/* tasks list input style */
+#task-list input{
+    width: 15px;
+}
+
+/* task log container styles */
+#tasks-details {
+    width: 70%;
+    padding: 10px;
+}
+
+#tasks-details p {
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    margin: 5px;
+}
+
+#date i{
+    color: grey;
+    padding: 10px;
+}
+
+#categored {
+    width: 15%;
+    margin: 30px;
+    padding: 10px;
+    box-shadow: 1px 1px 3px 5px lightblue;
+}
+
+
+
+
+

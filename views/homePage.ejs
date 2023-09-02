@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> <%= title %> </title>
+        <script src="https://kit.fontawesome.com/b42969be6e.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <div id="container">
+            <!-- Adding title -->
+            <div>
+                <h1> TODO App </h1>
+            </div>
+
+            <!-- Form for adding task -->
+            <div id="form-container">
+                <form action="/add-task" id="category_Form" method="post">
+                    <!-- description -->
+                    <div id="description">
+                        <p>Description</p>
+                        <input type="text" name="description" placeholder="What do you need to do">
+                    </div>
+
+                    <!-- category and due date task -->
+                    <div id="detail">
+                        <div id="category">
+                            <label for="catgy"> Category</label>
+                            <select name="catgy" id="catgy">
+                                <option value="Personal"> Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="School">School</option>
+                                <option value="Cleaning">Cleaning</option>
+                                <option value="Other">Others</option>
+                            </select>
+                        </div>
+
+                        <!-- due Date -->
+                        <div id="dueDate">
+                            <label for="due_Date">Due Date</label>
+                            <input type="date" name="due_Date" id="due_Date">
+                        </div>
+
+                    </div>
+                    <!--end category and due date task -->
+
+                    <!-- Add and delete button -->
+                    <div id="buttons">
+                        <!-- add button -->
+                        <div id="add-button">
+                            <button type="submit" id="addTask">
+                                <i class="fas fa-plus"></i>
+                                Add Task
+                            </button>
+                        </div>
+
+                        <!-- delete button -->
+                        <div id="delete-button">
+                            <button type="button" id="deleteTask">
+                                <i class="fas fa-trash-can"></i>
+                                Delete Task
+                            </button>
+                        </div>
+
+                    </div>
+                    <!-- end of add and delete button -->
+
+                </form>
+            </div>
+            <!-- end form for tasks -->
+
+        
+        <!-- Displaying tasks -->
+        <div id="tasks-container">
+            <ul>
+                <% for (let i of List) { %>
+                <li>
+                    <div id="task-list">
+                        <!-- Checkbox for task deletion -->
+                        <input type="checkbox" class="delete-checkbox" name="selectedItems" value="<%= i._id %>">
+                        <!-- Task details -->
+                        <div id="tasks-details">
+                            <p id="descripted">
+                                <i class="fa-regular fa-pen-to-square" style="font-size: 1.6rem; color: grey; margin: 0 0.5rem;"></i>
+                                <%= i.description %>
+                            </p>
+                            <p id="date">
+                                <i class="fas fa-calendar-days"></i>
+                                <!-- Formatting the task due date -->
+                                <% if (i.dueDate) { %>
+                                    <!-- <% console.log("Formatting date:", i.dueDate); %> -->
+                                    <%= i.dueDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %>
+                                
+                                <% } %>
+                            </p>
+                        </div>
+                        <!-- Task category -->
+                        <p id="categored">
+                            <%= i.category %>
+                        </p>
+
+                    </div>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+
+        <script src="/js/home.js"></script>
+    </body>
+</html>
